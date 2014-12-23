@@ -15,5 +15,5 @@ RUN chmod +x startXvfb.sh
 # Expose vnc port
 EXPOSE 5900
 
-ENV SUBLIME_PATH=subl
+ENV SUBLIME_PATH subl
 ENV DISPLAY :0
