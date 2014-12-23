@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
 
 ADD sublime-text_build-3065_amd64.deb sublime-text.deb
 RUN dpkg -i sublime-text.deb
+RUN rm sublime-text.deb
 
 ADD *.sh /
 RUN chmod +x *.sh
