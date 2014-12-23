@@ -6,14 +6,18 @@ RUN apt-get update && apt-get install -y \
 	x11vnc \
 	ratpoison
 
-ADD http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_amd64.deb sublime-text.deb
+ADD sublime-text_build-3065_amd64.deb sublime-text.deb
 RUN dpkg -i sublime-text.deb
 
-ADD startXvfb.sh startXvfb.sh
-RUN chmod +x startXvfb.sh
+ADD *.sh /
+RUN chmod +x *.sh
 
 # Expose vnc port
 EXPOSE 5900
+
+RUN mkdir -p "$HOME/.config/sublime-text-3/Packages"
+VOLUME /SublimeGHCi
+RUN ln -s /SublimeGHCi "$HOME/.config/sublime-text-3/Packages/SublimeGHCi"
 
 ENV SUBLIME_PATH subl
 ENV DISPLAY :0
