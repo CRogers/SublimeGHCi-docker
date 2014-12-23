@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./start_xvfb.sh && ./run_all_tests.sh
+./start_xvfb.sh && ./run_tests.sh
