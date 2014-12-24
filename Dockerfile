@@ -1,5 +1,7 @@
 FROM gdoteof/ghc:7.8.3
 
+RUN cabal update
+
 RUN apt-get update && apt-get install -y \
 	xvfb \
 	libgtk2.0 \
