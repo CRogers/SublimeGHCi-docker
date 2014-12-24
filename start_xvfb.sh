@@ -7,7 +7,7 @@ function sleeper() {
 }
 
 echo Starting xvfb...
-Xvfb -screen 0 1024x768x24 >/Logs/xvfb.stdout 2>$LOG_DIR/xvfb.stderr &
+Xvfb -screen 0 1024x768x24 >/Logs/xvfb.stdout 2>/Logs/xvfb.stderr &
 sleeper
 
 echo Starting ratpoison...
