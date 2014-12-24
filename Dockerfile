@@ -13,6 +13,8 @@ RUN rm sublime-text.deb
 ADD *.sh /
 RUN chmod +x *.sh
 
+VOLUME /Logs
+
 # Expose vnc port
 EXPOSE 5900
 
