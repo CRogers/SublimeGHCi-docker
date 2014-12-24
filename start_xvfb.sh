@@ -7,14 +7,14 @@ function sleeper() {
 }
 
 echo Starting xvfb...
-Xvfb -screen 0 1024x768x24 >/Logs/xvfb.stdout 2>/Logs/xvfb.stderr &
+Xvfb -screen 0 1024x768x24 >/Logs/xvfb.stdout.log 2>/Logs/xvfb.stderr.log &
 sleeper
 
 echo Starting ratpoison...
-ratpoison >/Logs/ratpoison.stdout 2>/Logs/ratpoison.stderr &
+ratpoison >/Logs/ratpoison.stdout.log 2>/Logs/ratpoison.stderr.log &
 
 echo Starting x11vnc...
-x11vnc -display :0 >/Logs/x11vnc.stdout 2>/Logs/x11vnc.stderr &
+x11vnc -display :0 >/Logs/x11vnc.stdout.log 2>/Logs/x11vnc.stderr.log &
 
 sleeper
 
