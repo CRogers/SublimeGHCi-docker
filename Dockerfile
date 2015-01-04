@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
 	libgtk2.0 \
 	x11vnc \
 	ratpoison \
-	recordmydesktop
+	recordmydesktop \
+	git
 
 ADD sublime-text_build-3065_amd64.deb sublime-text.deb
 RUN dpkg -i sublime-text.deb
